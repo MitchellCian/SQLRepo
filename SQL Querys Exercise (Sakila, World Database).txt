@@ -1,0 +1,84 @@
+
+SELECT * FROM sakila.actor
+
+SELECT * FROM sakila.actor 
+WHERE first_name = 'John'
+
+SELECT * FROM sakila.actor 
+WHERE last_name = 'Neeson'
+
+SELECT * FROM sakila.actor 
+WHERE actor_id LIKE '%0'
+
+(5)
+SELECT * FROM sakila.film 
+WHERE film_id = 100
+
+(6)
+SELECT * FROM sakila.film 
+WHERE rating = 'R'
+
+(7)
+SELECT * FROM sakila.film 
+WHERE rating != 'R'
+
+(8)
+SELECT * FROM sakila.film 
+WHERE special_features = 'Deleted Scenes'
+
+(9)
+SELECT DISTINCT last_name FROM sakila.actor 
+
+(10 INCOMPLETE)
+
+(11)
+SELECT actor_id, COUNT (actor_id) 
+FROM sakila.film_actor 
+GROUP BY actor_id (DESC NOT WORKING)
+
+(12 INCOMPLETE)
+SELECT * FROM sakila.film
+SELECT * FROM sakila.inventory
+SELECT film_id,
+FROM sakila.inventory
+WHERE film_id=(
+    SELECT film_id
+    FROM store_id
+    WHERE film_id=1
+);
+(13)
+SELECT AVG (length) FROM sakila.film
+
+(14 INCOMPLETE)
+SELECT sakila.film_category, AVG(length) AS avg_length FROM sakila.film_category GROUP BY sakila.film;
+
+(15 INCOMPLETE)
+
+(16)
+SELECT *
+FROM sakila.film
+WHERE length=(
+    SELECT MAX(length)
+    FROM sakila.film
+);
+
+(17)
+SELECT * FROM sakila.film
+SELECT COUNT(title) FROM sakila.film WHERE release_year = '2010'
+
+(18 INCOMPLETE)
+INSERT INTO sakila.actor (full_name) 
+
+(19)
+SELECT * FROM sakila.actor WHERE first_name = 'Fred'
+SELECT * FROM sakila.film_actor WHERE actor_id = 16
+
+(20)
+
+
+
+WORLD DATABASE EXERCISES
+
+(1) SELECT * FROM world.city 
+SELECT COUNT (CountryCode) from world.city WHERE CountryCode = 'USA'
+
